@@ -1,0 +1,213 @@
+\documentclass[conference]{IEEEtran}
+
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+
+\def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
+    T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
+    
+\begin{document}
+
+\title{Large Signal Analysis and architecture
+patterns in analog design.}
+
+\thanks{Thanks to support from IndiaRXiv and OSF.}
+
+
+\author{\IEEEauthorblockN{1\textsuperscript{st} Dr Anil Kumar Bheemaiah}
+\IEEEauthorblockA{\textit{Lead Researcher and Owner, Bheemaiah Corporation} \\
+\textit{Bheemaiah Corporation, Seattle , USA}\\
+\\
+miyawaki@yopmail.com}
+
+}
+
+
+
+
+\maketitle
+
+\begin{abstract}
+Design patterns inspired from the field of architecture, have a strong presence in software engineering,
+with the leading contribution by the gang of four, circuit design lacks formal architectural definitions and
+design patterns, definitions, although, BEAM or MFA I design has a modular design structure with design
+patterns. In this paper we introduce a Tensor definition for architectural patterns, with a stability analysis
+of large signal behaviour, leading to definitions of associative memory, state diagrams and digital
+architectural paradigms in analog design. In future work, we design natural language like grammars to
+tensor representations in a formal complexity theory of Lie Computability and monotonic functions.
+
+
+\end{abstract}
+
+\begin{IEEEkeywords}
+design patterns, structural, functional, behavioural, architecture, analog design, design thinking, constructivism, BEAM robotics, gestalt.
+\end{IEEEkeywords}
+
+\section{Introduction}
+\subsection{What:}
+Structural and Functional architectural patterns in analog design, with small signal and large signal
+analysis in analog design, illustrated with Nv neuron architectures.
+\subsection{How:}
+Reconfigurable design blocks for op amps and BJT/FETs are explored with reconfigurable control buses,
+and complex impedances, a combination of capacitive, inductive and resistive elements, all amenable to
+low scale integrated design as FlexICs. With this modular core for use in reconfigurable BEAM robotics,
+as an illustration of the use of design patterns.
+\subsubsection{The Introduction}
+Opamp and transistor based circuits are
+designed with patterns using control loops
+and noise engineering, based on feedback
+control systems and many architectural
+patterns, behavioural, structural and
+functional. We describe several such
+patterns and illustrate examples with model
+and behaviour driven design, in Nv neuron
+based Tensor topologies.
+Small signal models of two port networks
+are translated into simple model based
+approximations of active impedances. In
+impedance transfer logic, the atomicity of
+analog design, we present a large signal
+analysis in tensor definitions of complexity,
+with a dynamical systems definition of two
+ports with noise engineering, for S/N ratios
+and gain bandwidth tradeoff in design
+architectures.
+
+
+\section{Background}
+In the previous publications, we have
+defined a tensor architecture for Nv and Nu
+neurons for MFA I architectures, in this
+paper we generalize design patterns for
+architecture for fulfilment of tensor
+topologies.
+
+\section{Architectural Patterns.}
+
+\subsection{Current Mirror Pattern.}
+(“Chapter 11: The Current Mirror [Analog
+Devices Wiki]” n.d.)
+\subsection{Patterns with a reconfigurable opamp
+(ROP).}
+
+\begin{itemize}
+\item denoted in CaC is an opamp(in+,in-, out),
+\item impedence_mux_i,  i = 1 to 4 ,
+\item impedence_mux_opamp+(in, out),
+\item impedence_mux_opamp-(in,out),
+\item imepdence_feedback+(in,out) and
+\item impedence_feedback-(in,out).
+\end{itemize}
+
+The circuit graph is straightforward from
+these elements with the impedance being a
+complex value with a multiplexed hard
+wired control bus, [in+,in-,fb+,fb-], with
+various values for various circuit topologies.
+\subsection{Opamp Gain, Negative Feedback.}
+An ROP with [in+,in-,fb+,fb-] = [1, 0, 1,0]
+\subsection{Active Impedance, Negative Feedback.}
+ROP with [in+,in-,fb+,fb-] = [1, 1, 1,0]
+\subsection{Opamp, Differential Amplifier.}
+ROP with [in+,in-,fb+,fb-] = [1, 1, 0,0]
+\subsection{Active Impedance, Positive Feedback}
+ROP with [in+,in-,fb+,fb-] = [1, 1, 0, 1]
+
+
+\section{Transistor based patterns -  both
+BJT and FET  (RTB)}
+
+\begin{itemize}
+\item transistor(base,in , out), 
+\item impedence_mux_i, i = 1 to 4 ,
+\item impedence_base_1(in, out),
+\item impedence_base_2(in,out),
+\item imepdence_in( in,out) and
+\item impedence_out(in,out).
+\end{itemize}
+
+\sunsection{}
+The RTB allows for a biased reconfigurable
+transistor, allowing for many topologies on a
+control vector [b1, b2, in,out] and 4 port [b1,
+b2, in, out] for creation of Nv, Nu and n-core
+biomorphs as an illustration.
+
+\section{Functional and structural patterns.}
+\begin{enumerate}
+\item  Frequency Modulation.(functional) with control [1, 1, 1, 0] or [1, 1, 1, 1] with an impedanceIn value for an oscillator.
+\item  Amplitude Modulation (functional) with control [1, 1, 1, 1] and impedanceOut with capacitive and resistive values.
+\item Pulse code modulation.(functional) Bicore, multivibrator with variable duty cycle, two [1,1,1,1] with positive feedback.
+\item Central pattern generator, many bicore designs, with positive feedback for noise engineering.
+\item Master-slave pattern.: Bicore flip-flop designs, with a feedback control loop for master - slave following, with capacitive impedance.
+\item  Handshake Protocol Pattern.: multicore, state machine based design, with atomic bicore state unit. State machine for hand shake.
+\item Shared Memory Pattern: Hysteresis based memory or limit cycles based bicore designs, for complex dynamical patterns.
+\item  I/O interrupt - asynchronous pattern.: State machine based multicore designs with interrupt controls.
+\item  Associative memory pattern.: bicore designs as dynamical systems with internal states and adaptive resonance theory for associative memory.(Contributors to Wikimedia projects 2016)
+\item  Hysteresis Pattern. (Contributors to Wikimedia projects 2003) Bicore with positive feedback.
+\item  State Machines. Bicore hysteresis forms a simple state machine, with a tandem n-core, creates a state machine. Each non schmitt trigger machine, with positive feedback has a rich state , phase diagram, with limit cycles for positive states and transitions from one state to another.
+\end{enumerate}
+
+\section {Formal definitions in Large signal
+analysis.}
+Large signal analysis of two port networks
+leads to non linear active impedances and
+tensor definitions for impedance transfer in
+opamp or transistor based designs, Stability
+theory in dynamical systems is well
+described in literature.(Corinto, Lanza, and
+Gilli 2007)(Bheemaiah, n.d.)
+Dc2Dc converters present a rich gamut of
+behaviours in stability analysis, leading to
+state machines with limit cycles and
+bifurcations of stable states and transitions
+ranging from ergodicity to bifurcations to
+persistence effects, in states.(“[No Title]”
+n.d.)(“[No Title]” n.d.)
+
+
+
+\section{Discussion.}
+Formal definitions of state systems in the
+context of stability theory, protocols for
+handshakes and maps, from lyapunov
+functions as the large signal solutions to
+field equations in two port networks for
+active impedance and impedance transfer
+have been described in this paper.
+The Tensor formulation , described as a
+generalized [T \(theta\)], is implemetable directly in
+state machine definitions and maps. Formal
+theory of analog architectures is defined in
+monotonic functions and asymptotics in
+complexity definitions of convergence and
+stability. This is defined in a future paper on
+Lie computability and Lie lattice theories of
+circuit analysis.
+
+
+
+
+
+
+
+
+
+\begin{thebibliography}{00}
+\bibitem{b1}Bheemaiah, Anil Kumar. n.d. “BEAM Autopilot.” https://doi.org/10.35543/osf.io/st2xa.
+\bibitem{b2}“Chapter 11: The Current Mirror [Analog Devices Wiki].” n.d. Accessed June 15, 2020. https://wiki.analog.com/university/courses/electronics/text/chapter-11.
+\bibitem{b3}Contributors to Wikimedia projects. 2002. “Design Patterns,” February. https://en.wikipedia.org/wiki/Design_Patterns.
+\bibitem{b4}———. 2003. “Schmitt Trigger,” November. https://en.wikipedia.org/wiki/Schmitt_trigger.
+\bibitem{b5}———. 2016. “Fusion Adaptive Resonance Theory,” March. 	https://en.wikipedia.org/wiki/Fusion_adaptive_resonance_theory.
+\bibitem{b6}Corinto, Fernando, Valentina Lanza, and Marco Gilli. 2007. “Limit Cycles and Bifurcations in Nonlinear Oscillatory Networks.” 2007 IEEE International Symposium on Circuits and Systems. https://doi.org/10.1109/iscas.2007.378102.
+\bibitem{b7}“[No Title].” n.d. Accessed June 15, 2020a. https://www.worldscientific.com/doi/abs/10.1142/S0218127416501662.
+\bibitem{b8}———. n.d. Accessed June 15, 2020b. https://www.mdpi.com/1996-1073/11/10/2747/pdf.
+\end{thebibliography}
+
+
+
+\end{document}
